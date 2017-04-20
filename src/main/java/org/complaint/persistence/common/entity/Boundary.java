@@ -12,6 +12,8 @@ import javax.validation.constraints.NotNull;
 import org.complaint.persistence.complaint.entity.AbstractAuditable;
 import org.hibernate.validator.constraints.Length;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,6 +28,7 @@ import lombok.Setter;
 @Builder
 @Table(name = "boundary")
 @SequenceGenerator(name = Boundary.SEQ_BOUNDARY, sequenceName = Boundary.SEQ_BOUNDARY, allocationSize = 1)
+@JsonIgnoreProperties(value = { "handler", "hibernateLazyInitializer" })
 public class Boundary extends AbstractAuditable {
 
 	private static final long serialVersionUID = -4061895436388967094L;

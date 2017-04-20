@@ -38,7 +38,7 @@ public class ComplaintController {
 
 	private void prepareNewForm(Model model) {
 		model.addAttribute("complaintTypes", complaintTypeService.getAll());
-		model.addAttribute("complaintStatus", complaintStatusService.getAll());
+		model.addAttribute("complaintStatus", complaintStatusService.getForUpdate());
 		model.addAttribute("department", departmentService.getAll());
 
 	}
