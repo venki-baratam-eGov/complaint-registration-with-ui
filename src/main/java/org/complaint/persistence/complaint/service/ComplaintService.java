@@ -60,7 +60,7 @@ public class ComplaintService {
 
 	public Optional<Complaint> getById(Long id) {
 
-		return complaintRepository.findOne(id);
+		return complaintRepository.findById(id);
 	}
 
 	@Transactional

@@ -19,7 +19,7 @@ public class EmployeeService {
 
 	public Optional<Employee> getById(Long id) {
 
-		return employeeRepository.findOne(id);
+		return employeeRepository.findById(id);
 	}
 
 	public List<Employee> getAll() {
